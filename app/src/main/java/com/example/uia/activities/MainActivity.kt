@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         dataBaseRef.child(preferences.getString("number","user1").toString()).updateChildren(favourUpdate).addOnSuccessListener {
             Toast.makeText(applicationContext,"Education Status Updated",Toast.LENGTH_SHORT).show()
         }
-        var intent = Intent(this, HomeScreen::class.java)
+        var intent = Intent(this, CommonQuest::class.java)
         startActivity(intent)
         finish()
     }
