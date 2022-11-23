@@ -27,6 +27,4 @@ class Constants {
     enum class Major{
         ComputerScience, Medicine, Accounts
     }
-
-
 }

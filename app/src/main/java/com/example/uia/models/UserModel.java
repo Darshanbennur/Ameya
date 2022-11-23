@@ -1,13 +1,18 @@
 package com.example.uia.models;
 
 import com.example.uia.constant.Constants;
+import com.example.uia.constant.Constants.EduStatus;
+import com.example.uia.constant.Constants.Gender;
+import com.example.uia.constant.Constants.UrbanStatus;
 
-public class UserModel {
+import java.io.Serializable;
+
+public class UserModel implements Serializable {
     String name;
     String no;
-    Constants.EduStatus education;
-    Constants.UrbanStatus urban;
-    Constants.Gender gender;
+    EduStatus education;
+    UrbanStatus urban;
+    Gender gender;
     Boolean engnat;
     Constants.Hand hand;
     Constants.married married;
@@ -17,7 +22,7 @@ public class UserModel {
         this.no = no;
     }
 
-    public UserModel(String name, String no, Constants.EduStatus education, Constants.UrbanStatus urban, Constants.Gender gender, Boolean engnat, Constants.Hand hand, Constants.married married) {
+    public UserModel(String name, String no, EduStatus education, UrbanStatus urban, Gender gender, Boolean engnat, Constants.Hand hand, Constants.married married) {
         this.name = name;
         this.no = no;
         this.education = education;
@@ -26,5 +31,69 @@ public class UserModel {
         this.engnat = engnat;
         this.hand = hand;
         this.married = married;
+    }
+
+    public EduStatus getEducation() {
+        return education;
+    }
+
+    public void setEducation(EduStatus education) {
+        this.education = education;
+    }
+
+    public UrbanStatus getUrban() {
+        return urban;
+    }
+
+    public void setUrban(UrbanStatus urban) {
+        this.urban = urban;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
+
+    public Boolean getEngnat() {
+        return engnat;
+    }
+
+    public void setEngnat(Boolean engnat) {
+        this.engnat = engnat;
+    }
+
+    public Constants.Hand getHand() {
+        return hand;
+    }
+
+    public void setHand(Constants.Hand hand) {
+        this.hand = hand;
+    }
+
+    public Constants.married getMarried() {
+        return married;
+    }
+
+    public void setMarried(Constants.married married) {
+        this.married = married;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNo() {
+        return no;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
     }
 }

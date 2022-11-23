@@ -30,7 +30,7 @@
         android:hint="Area"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
         <AutoCompleteTextView
-            android:id="@+id/drop1"
+            android:id="@+id/dropArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -58,7 +58,7 @@
         android:hint="Gender"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
         <AutoCompleteTextView
-            android:id="@+id/drop2"
+            android:id="@+id/dropGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -86,7 +86,7 @@
         android:hint="Hand"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
         <AutoCompleteTextView
-            android:id="@+id/drop3"
+            android:id="@+id/dropHand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -114,7 +114,7 @@
         android:hint="Marital Status"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
         <AutoCompleteTextView
-            android:id="@+id/drop4"
+            android:id="@+id/dropMarital"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -142,7 +142,7 @@
         android:hint="Major"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
         <AutoCompleteTextView
-            android:id="@+id/drop5"
+            android:id="@+id/dropMajor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"

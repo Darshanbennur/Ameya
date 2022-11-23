@@ -8,6 +8,7 @@ import android.util.Patterns
 import android.view.LayoutInflater
 import android.widget.Toast
 import com.example.uia.databinding.ActivityLoginScreenBinding
+import com.example.uia.models.UserModel
 import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 
@@ -52,7 +53,11 @@ class LoginScreen : AppCompatActivity() {
                         Toast.makeText(applicationContext,"Logged in Successfully", Toast.LENGTH_SHORT).show()
 
                         sharedPreferences.edit().putString("number","" + phoneNum).apply()
+
+                        var name = "name" //TODO: add name from firebase
+                        var userModel : UserModel = UserModel(name, phoneNum)
                         var intent = Intent(this, MainActivity::class.java)
+                        intent.putExtra("currentUser", userModel)
                         startActivity(intent)
                         finish()
                     }
