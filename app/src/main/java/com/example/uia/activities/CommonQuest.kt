@@ -67,7 +67,7 @@ class CommonQuest : AppCompatActivity() {
             Toast.makeText(applicationContext,"Sed !!", Toast.LENGTH_SHORT).show()
         }
 
-        var intent = Intent(this, HomeScreen::class.java)
+        var intent = Intent(this, ResultScreen::class.java)
         intent.putExtra("currentUser", currentUser)
         startActivity(intent)
         finish()

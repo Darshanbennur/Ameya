@@ -54,7 +54,7 @@ class HomeScreen : AppCompatActivity() {
         setContentView(binding.root)
 
         arrayList = ArrayList()
-        binding.mainQues.text = "Q." + question[count]
+        binding.mainQues.text = "Q. " + question[count] + "..."
         for (i in options[count]){
             var ques = Ques(i.toString(),false)
             arrayList.add(ques)
@@ -84,7 +84,7 @@ class HomeScreen : AppCompatActivity() {
         count++;
         if(count < 5){
             arrayList.clear()
-            binding.mainQues.text = "Q." + question[count]
+            binding.mainQues.text = "Q. " + question[count] + "..."
             for (i in options[count]){
                 var ques = Ques(i.toString(),false)
                 arrayList.add(ques)

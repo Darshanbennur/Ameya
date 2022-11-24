@@ -20,7 +20,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -55,7 +56,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database-ktx:20.0.6'
 
     implementation("ir.mahozad.android:pie-chart:0.7.0")
-    //Lottie
+    //Lotti
     implementation 'com.airbnb.android:lottie:3.4.0'
 
 }
