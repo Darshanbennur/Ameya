@@ -16,13 +16,22 @@ public class UserModel implements Serializable {
     Boolean engnat;
     Constants.Hand hand;
     Constants.married married;
+    Constants.Major major;
+
+    public Constants.Major getMajor() {
+        return major;
+    }
+
+    public void setMajor(Constants.Major major) {
+        this.major = major;
+    }
 
     public UserModel(String name, String no) {
         this.name = name;
         this.no = no;
     }
 
-    public UserModel(String name, String no, EduStatus education, UrbanStatus urban, Gender gender, Boolean engnat, Constants.Hand hand, Constants.married married) {
+    public UserModel(String name, String no, EduStatus education, UrbanStatus urban, Gender gender, Boolean engnat, Constants.Hand hand, Constants.married married,Constants.Major major) {
         this.name = name;
         this.no = no;
         this.education = education;
@@ -31,6 +40,7 @@ public class UserModel implements Serializable {
         this.engnat = engnat;
         this.hand = hand;
         this.married = married;
+        this.major = major;
     }
 
     public EduStatus getEducation() {

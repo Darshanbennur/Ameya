@@ -1,9 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/navBarColor"
     tools:context=".activities.HomeScreen">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/ques_ui">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animater"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/question"/>
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/andika"
+            android:text="1/5"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/mainQues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andika"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:text="Ques will come here"/>
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnext"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="Next Question"
+            android:layout_marginTop="20dp"
+            android:onClick="nextQuestion"
+            android:background="@drawable/buttons_back"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

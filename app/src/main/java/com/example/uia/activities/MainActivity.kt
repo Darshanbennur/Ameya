@@ -66,6 +66,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext,"Education Status Updated",Toast.LENGTH_SHORT).show()
         }
         var intent = Intent(this, CommonQuest::class.java)
+        intent.putExtra("currentUser", currentUser)
         startActivity(intent)
         // finish()
     }
