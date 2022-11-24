@@ -57,17 +57,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateData(educationStatus : EduStatus){
-        /*val favourUpdate = mapOf<String,String>(
-            "EdStatus" to num
-        )*/
+        val favourUpdate = mapOf<String,UserModel>(
+            currentUser.no to currentUser
+        )
 
         currentUser.education = educationStatus
-        /*dataBaseRef.child(preferences.getString("number","user1").toString()).updateChildren(favourUpdate).addOnSuccessListener {
+        dataBaseRef.updateChildren(favourUpdate).addOnSuccessListener {
             Toast.makeText(applicationContext,"Education Status Updated",Toast.LENGTH_SHORT).show()
-        }*/
+        }
         var intent = Intent(this, CommonQuest::class.java)
         startActivity(intent)
-        finish()
+        // finish()
     }
 
 }
