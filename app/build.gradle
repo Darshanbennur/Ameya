@@ -54,6 +54,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.8'
     implementation 'com.google.firebase:firebase-database-ktx:20.0.6'
 
+    implementation("ir.mahozad.android:pie-chart:0.7.0")
     //Lottie
     implementation 'com.airbnb.android:lottie:3.4.0'
 

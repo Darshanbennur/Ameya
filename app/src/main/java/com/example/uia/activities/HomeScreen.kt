@@ -1,5 +1,6 @@
 package com.example.uia.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +15,7 @@ import com.example.uia.models.Ques
 
 class HomeScreen : AppCompatActivity() {
     lateinit var binding : ActivityHomeScreenBinding
+    lateinit var results : ArrayList<Int>
     var count = 0
     var R = 0
     var I = 0
@@ -96,9 +98,26 @@ class HomeScreen : AppCompatActivity() {
             Log.i("S",S.toString())
             Log.i("E",E.toString())
             Log.i("C",C.toString())
-            binding.btnext.isEnabled = false
+            // binding.btnext.isEnabled = false
             binding.btnext.text = "Completed"
             Toast.makeText(applicationContext,"Done for Now", Toast.LENGTH_SHORT).show()
+
+            results = ArrayList()
+            results.add(Integer.valueOf(R.toString()))
+            results.add(Integer.valueOf(I.toString()))
+            results.add(Integer.valueOf(A.toString()))
+            results.add(Integer.valueOf(S.toString()))
+            results.add(Integer.valueOf(E.toString()))
+            results.add(Integer.valueOf(C.toString()))
+
+            var sum : Double = (R+I+A+S+E+C).toDouble();
+            var intent = Intent(this,ResultActivity::class.java)
+            intent.putIntegerArrayListExtra("arrayList",results)
+            intent.putExtra("sum", sum)
+            startActivity(intent)
+            /*var intent = Intent(this, ResultActivity::class.java)
+            // intent.putExtra("currentUser", currentUser)
+            startActivity(intent)*/
         }
 
     }

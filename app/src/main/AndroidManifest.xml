@@ -15,6 +15,9 @@
         android:theme="@style/Theme.UIA"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.ResultScreen"
             android:exported="false">
             <meta-data
