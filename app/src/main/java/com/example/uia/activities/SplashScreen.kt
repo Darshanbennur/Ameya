@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
+import android.widget.Toast
 import com.example.uia.R
 import com.example.uia.databinding.ActivityCommonQuestBinding
 import com.example.uia.databinding.ActivitySplashScreenBinding
@@ -25,7 +26,6 @@ class SplashScreen : AppCompatActivity() {
         handler = Handler()
 
         handler.postDelayed({
-
             if (preferences.getString("number", "no").toString() == "no") {
                 val intent = Intent(this, LoginScreen::class.java)
                 startActivity(intent)
@@ -35,8 +35,10 @@ class SplashScreen : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             }
+            finish()
         },2000)
 
     }
+
 
 }

@@ -17,7 +17,7 @@
         android:textSize="24sp"
         android:layout_marginStart="20dp"
         android:textColor="@color/white"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         android:text="Hello, Darshan!!"/>
 
     <TextView
@@ -29,11 +29,21 @@
         android:textColor="@color/white"
         android:text="-Welcome Back"/>
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animater"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="120dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/hello"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
         android:background="@drawable/ques_ui">
 
@@ -225,7 +235,7 @@
             android:id="@+id/potential"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/buttons_back"
             android:textColor="@color/white"
             android:text="Let's Test Your Potential"/>

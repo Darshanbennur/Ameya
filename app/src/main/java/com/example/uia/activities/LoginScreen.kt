@@ -57,9 +57,7 @@ class LoginScreen : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(userEmail,password).addOnCompleteListener {
                     if (it.isSuccessful){
                         Toast.makeText(applicationContext,"Logged in Successfully", Toast.LENGTH_SHORT).show()
-                        sharedPreferences.edit().putString("number","" + phoneNum).apply()
                         login(phoneNum)
-
                     }
                     else{
                         Toast.makeText(applicationContext,"Login Error", Toast.LENGTH_SHORT).show()

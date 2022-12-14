@@ -6,10 +6,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.widget.Toast
-import com.example.uia.R
 import com.example.uia.databinding.ActivityResultBinding
-import com.example.uia.databinding.ActivityResultScreenBinding
 import ir.mahozad.android.PieChart
 
 class ResultActivity : AppCompatActivity() {
@@ -23,12 +20,12 @@ class ResultActivity : AppCompatActivity() {
         binding =  ActivityResultBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
-        val pieChart = findViewById<PieChart>(R.id.pieChart)
+//        val pieChart = findViewById<PieChart>(R.id.pieChart)
         results = intent.getIntegerArrayListExtra("arrayList") as ArrayList<Int>
         var sum : Double = intent.getDoubleExtra("sum", 1.0)
         sharedPreferences = getSharedPreferences("userData", MODE_PRIVATE)
 
-        pieChart.apply {
+        binding.pieChart.apply {
             slices = listOf(
                 PieChart.Slice((results.get(0)/sum).toFloat(), Color.rgb(141, 161, 185),label = "R",legend = "Realistic"),
                 PieChart.Slice((results.get(1)/sum).toFloat(), Color.rgb(149, 173, 182),label = "I",legend = "Investigative"),
@@ -61,6 +58,19 @@ class ResultActivity : AppCompatActivity() {
 
             }
         }
+
+        when (word) {
+            "R" -> binding.approach.text = "Your mind have a Realistic Approach!"
+            "I" -> binding.approach.text = "Your mind have a Investigative Approach!"
+            "A" -> binding.approach.text = "Your mind have a Artistic Approach!"
+            "S" ->  binding.approach.text = "Your mind have a Social Approach!"
+            "E" -> binding.approach.text = "Your mind have a Enterprising Approach!"
+            "C" -> binding.approach.text = "Your mind have a Conventional Approach!"
+            else -> { // Note the block
+
+            }
+        }
+
         var secondMax = 0
         var twoIndex = -1
         for(i in 0..results.size-1){

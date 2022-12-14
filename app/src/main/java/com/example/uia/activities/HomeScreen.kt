@@ -8,9 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.ListView
 import android.widget.Toast
-import com.example.uia.constant.Constants
 import com.example.uia.databinding.ActivityHomeScreenBinding
-import com.example.uia.databinding.ActivityMainBinding
 import com.example.uia.models.Ques
 
 class HomeScreen : AppCompatActivity() {
@@ -29,15 +27,15 @@ class HomeScreen : AppCompatActivity() {
     var question = arrayListOf<String>("I like to","I'm Good at","I am","I wouldn’t mind","I Enjoy")
 
     val options = arrayOf(
-        arrayOf<String>("Work on cars", "Work in team", "Organize things", "Read about art and music", "Clear instruction to follow", "Influence people", "Do experiment ",
-            "Teach or train people ", "Help people solve prob ", "Take responsibility ", "Analyze prob ", "Start my business ",
-            "Get into discussion ", "Lead"),
-        arrayOf<String>("Working independent", "Healing people", "Assembling things", "Working with numbers", "Keeping record",
-                "Working outdoor", "Typing", "Cook", "Puzzles"),
-        arrayOf<String>("Ambitious", "Creative people", "Practical", "Math", "Building things", "Play instruments", "helper"),
-        arrayOf<String>("working 8 hours per day", "Helping people", "Giving speeches", "acting", "Care animal", "Selling things"),
-        arrayOf<String>("Creative writing", "Science", "Figure how things work", "Learning about cultures", "Pay attention", "Work in office",
-            "To draw", "Give speeches"),
+        arrayOf<String>("Work on cars", "Work in a team", "Organize things", "Read about art and music", "To Follow Clear instructions", "Influence people", "Do experiment ",
+            "Teach or train people ", "Help people to solve their prob ", "Take responsibility ", "Analyze problems ", "Start my own business ",
+            "Get into discussions", "Lead"),
+        arrayOf<String>("Working independently", "Healing others", "Assembling things", "Working with numbers", "Keeping records",
+                "Working outdoors", "Typing", "Cooking", "Solving Puzzles"),
+        arrayOf<String>("Ambitious", "A Creative thinker", "A Practical thinker", "A Logical thinker", "A Constructive thinker", "A Musician", "A Helper"),
+        arrayOf<String>("Working 8 hours per day", "Helping out people", "Giving a Speech", "Acting", "Caring for an animal", "Selling things"),
+        arrayOf<String>("Creative writing", "Learning about Science", "Figuring how things work", "Learning about cultures", "Paying attention to other", "Working in an office",
+            "Drawing Figurines", "Giving speeches"),
     )
 
     val answerSet = arrayOf(
@@ -63,7 +61,16 @@ class HomeScreen : AppCompatActivity() {
 
     }
 
+    fun animater(num: Int){
+        val intent = Intent(this, shifterClass::class.java)
+        intent.putExtra("num",num)
+        startActivity(intent)
+    }
+
     fun nextQuestion(view : View){
+        animater(count+1)
+        if(count == 3)
+            binding.btnext.text = "Complete the Test"
         for(i in 0..arrayList.size-1){
             if (arrayList[i].status){
                 var char = answerSet[count][i]
@@ -92,16 +99,6 @@ class HomeScreen : AppCompatActivity() {
             binding.listView.adapter = Adapter(this,arrayList)
             binding.count.text = (count+1).toString() + "/5"
         }else{
-            Log.i("R",R.toString())
-            Log.i("I",I.toString())
-            Log.i("A",A.toString())
-            Log.i("S",S.toString())
-            Log.i("E",E.toString())
-            Log.i("C",C.toString())
-            // binding.btnext.isEnabled = false
-            binding.btnext.text = "Completed"
-            Toast.makeText(applicationContext,"Done for Now", Toast.LENGTH_SHORT).show()
-
             results = ArrayList()
             results.add(Integer.valueOf(R.toString()))
             results.add(Integer.valueOf(I.toString()))

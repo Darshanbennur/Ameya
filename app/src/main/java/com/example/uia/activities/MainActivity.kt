@@ -28,7 +28,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         preferences = getSharedPreferences("userData", MODE_PRIVATE)
 
-        currentUser = intent.getSerializableExtra("currentUser") as UserModel;
+        if (intent.getSerializableExtra("currentUser") as UserModel != null){
+            currentUser = intent.getSerializableExtra("currentUser") as UserModel;
+        }
+
     }
 
     fun getStatus(view : View){
@@ -57,11 +60,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateData(educationStatus : EduStatus){
+        currentUser.education = educationStatus
         val favourUpdate = mapOf<String,UserModel>(
             currentUser.no to currentUser
         )
+        preferences.edit().putString("userEducation","" + currentUser.education).apply()
 
-        currentUser.education = educationStatus
         dataBaseRef.updateChildren(favourUpdate).addOnSuccessListener {
             Toast.makeText(applicationContext,"Education Status Updated",Toast.LENGTH_SHORT).show()
         }

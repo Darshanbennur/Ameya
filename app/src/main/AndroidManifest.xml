@@ -15,6 +15,21 @@
         android:theme="@style/Theme.UIA"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ProfilePage"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+        </activity>
+        <activity
+            android:name=".activities.shifterClass"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.webview"
             android:exported="false">
             <meta-data
@@ -30,7 +45,11 @@
         </activity>
         <activity
             android:name=".activities.ResultActivity"
-            android:exported="false" />
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".activities.ResultScreen"
             android:exported="true">

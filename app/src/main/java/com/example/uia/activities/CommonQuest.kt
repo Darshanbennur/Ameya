@@ -1,6 +1,7 @@
 package com.example.uia.activities
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -18,6 +19,7 @@ class CommonQuest : AppCompatActivity() {
 
     lateinit var binding : ActivityCommonQuestBinding
     private lateinit var currentUser : UserModel
+    private lateinit var sharedPreferences : SharedPreferences
     var dataBaseRef : DatabaseReference = Firebase.database.getReference("Users")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +27,7 @@ class CommonQuest : AppCompatActivity() {
         binding = ActivityCommonQuestBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
         currentUser = intent.getSerializableExtra("currentUser") as UserModel;
+        sharedPreferences = getSharedPreferences("userData", MODE_PRIVATE)
 
         val area = Constants.UrbanStatus.values()
         val adapter = ArrayAdapter(this,R.layout.list_item,area)
@@ -54,9 +57,12 @@ class CommonQuest : AppCompatActivity() {
     private fun saveData() {
         currentUser.urban = Constants.UrbanStatus.valueOf(binding.dropArea.text.toString())
         currentUser.gender = Constants.Gender.valueOf(binding.dropGender.text.toString())
+        sharedPreferences.edit().putString("userGender","" + currentUser.gender).apply()
         currentUser.hand = Constants.Hand.valueOf(binding.dropHand.text.toString())
         currentUser.married = Constants.married.valueOf(binding.dropMarital.text.toString())
+        sharedPreferences.edit().putString("userMaritial","" + currentUser.married).apply()
         currentUser.major = Constants.Major.valueOf(binding.dropMajor.text.toString())
+        sharedPreferences.edit().putString("userMajor","" + currentUser.major).apply()
 
         var myMap = mapOf<String, UserModel>(
             currentUser.no to currentUser
@@ -69,6 +75,7 @@ class CommonQuest : AppCompatActivity() {
 
         var intent = Intent(this, ResultScreen::class.java)
         intent.putExtra("currentUser", currentUser)
+        sharedPreferences.edit().putString("number","" + currentUser.no).apply()
         startActivity(intent)
         finish()
     }

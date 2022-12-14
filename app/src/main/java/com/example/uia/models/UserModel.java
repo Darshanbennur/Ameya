@@ -10,6 +10,7 @@ import java.io.Serializable;
 public class UserModel implements Serializable {
     String name;
     String no;
+    String email;
     EduStatus education;
     UrbanStatus urban;
     Gender gender;
@@ -24,6 +25,12 @@ public class UserModel implements Serializable {
 
     public void setMajor(Constants.Major major) {
         this.major = major;
+    }
+
+    public UserModel(String name, String no, String email) {
+        this.name = name;
+        this.no = no;
+        this.email = email;
     }
 
     public UserModel(String name, String no) {

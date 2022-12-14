@@ -6,13 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/navBarColor"
+    android:gravity="center_horizontal"
+    android:background="#28a99e"
     tools:context=".activities.HomeScreen">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:fontFamily="@font/andika"
+        android:textColor="@color/white"
+        android:text="📚     RIASEC   Test"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
@@ -25,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:background="@color/white"
+                android:background="@drawable/register_login_back"
                 android:padding="20dp"
                 android:orientation="vertical">
 
@@ -70,7 +84,8 @@
                     android:layout_width="150dp"
                     android:layout_height="50dp"
                     android:text="Next Question"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="10dp"
                     android:textColor="@color/white"
                     android:onClick="nextQuestion"
                     android:background="@drawable/buttons_back"/>

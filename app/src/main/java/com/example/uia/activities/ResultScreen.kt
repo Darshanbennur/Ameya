@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.uia.databinding.ActivityResultScreenBinding
+import com.example.uia.models.UserModel
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -20,6 +21,7 @@ import java.util.*
 class ResultScreen : AppCompatActivity() {
     lateinit var binding : ActivityResultScreenBinding
     private lateinit var sharedPreferences : SharedPreferences
+    private lateinit var currentUser : UserModel
     var dataBaseRef : DatabaseReference = Firebase.database.getReference("Users")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +29,16 @@ class ResultScreen : AppCompatActivity() {
         binding =  ActivityResultScreenBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
         sharedPreferences = getSharedPreferences("userData", MODE_PRIVATE)
+
+//        if(intent.getSerializableExtra("currentUser") as UserModel != null){
+//            currentUser = intent.getSerializableExtra("currentUser") as UserModel
+//            binding.userName.text = "Hello, " + currentUser.name.toString() + "!"
+//        }
+//        else{
+//            binding.userName.text = sharedPreferences.getString("name","Oppsies Error").toString()
+//        }
+        binding.userName.text = "Hello, " + sharedPreferences.getString("name","Oppsies Error").toString() + "!"
+
         binding.btn2.isClickable = false
         binding.btn3.isClickable = false
         binding.btn4.isClickable = false
@@ -37,21 +49,6 @@ class ResultScreen : AppCompatActivity() {
             binding.btn3.isClickable = true
             binding.btn4.isClickable = true
         }
-
-        dataBaseRef.child(sharedPreferences.getString("number","user1").toString()).addListenerForSingleValueEvent(object : ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                for (data in snapshot.children){
-                    if(Objects.equals(data.key,"name")){
-                        binding.userName.text = "Hello, " + data.value.toString() + "!"
-                    }
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-
-            }
-
-        })
 
         binding.potential.setOnClickListener {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://erratic-touch-34b.notion.site/Unconventional-Career-Stories-5cf355a518784b36b8cb26e904419a4c"))
@@ -76,9 +73,8 @@ class ResultScreen : AppCompatActivity() {
                 startActivity(browserIntent)
             }
             "4" -> {
-                if (!binding.btn4.isClickable){
-                    Toast.makeText(applicationContext,"Connot Proceed, Complete Quiz", Toast.LENGTH_SHORT).show()
-                }
+                var intent = Intent(this, ProfilePage::class.java)
+                startActivity(intent)
             }
             else -> { // Note the block
                 Toast.makeText(applicationContext,"Invalid", Toast.LENGTH_SHORT).show()

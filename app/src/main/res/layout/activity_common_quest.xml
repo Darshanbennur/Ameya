@@ -10,6 +10,15 @@
     android:background="@color/navBarColor"
     tools:context=".activities.CommonQuest">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Almost There, Enter the Following Data : "
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/andika"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="610dp">
@@ -17,6 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@drawable/register_login_back"
             android:orientation="vertical">
 
             <Space
@@ -25,29 +35,35 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="55dp"
                 android:fontFamily="@font/andika"
                 android:layout_marginStart="20dp"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:text="Q. What type of area did you live when u were a Child?"/>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/white"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white"
+                android:padding="10dp"
                 app:helperTextTextColor="@color/white"
                 android:hint="Area"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
                 <AutoCompleteTextView
                     android:id="@+id/dropArea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:inputType="none"/>
+
             </com.google.android.material.textfield.TextInputLayout>
-            -
+
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"/>
@@ -59,15 +75,20 @@
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:text="Q. What is your Gender?"/>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/white"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white"
+                android:padding="8dp"
                 app:helperTextTextColor="@color/white"
                 android:hint="Gender"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
                 <AutoCompleteTextView
                     android:id="@+id/dropGender"
                     android:layout_width="match_parent"
@@ -79,6 +100,7 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -87,78 +109,99 @@
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:text="Q. What hand do you use to write with?"/>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp"
+                app:boxStrokeColor="@color/white"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/white"
+                android:padding="8dp"
                 app:helperTextTextColor="@color/white"
                 android:hint="Hand"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
                 <AutoCompleteTextView
                     android:id="@+id/dropHand"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:inputType="none"/>
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:fontFamily="@font/andika"
                 android:layout_marginStart="20dp"
-                android:textColor="@color/white"
+                android:textColor="@color/navBarColor"
                 android:textSize="15sp"
                 android:text="Q. What is your marital status?"/>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
-                app:helperTextTextColor="@color/white"
+                app:boxStrokeColor="@color/navBarColor"
+                android:textColorHint="@color/navBarColor"
+                app:hintTextColor="@color/navBarColor"
+                android:padding="8dp"
+                app:helperTextTextColor="@color/navBarColor"
                 android:hint="Marital Status"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
                 <AutoCompleteTextView
                     android:id="@+id/dropMarital"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/navBarColor"
                     android:inputType="none"/>
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:fontFamily="@font/andika"
                 android:layout_marginStart="20dp"
-                android:textColor="@color/white"
+                android:textColor="@color/navBarColor"
                 android:textSize="15sp"
                 android:text="Q. If you attended a university, what was your major"/>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginTop="10dp"
-                app:helperTextTextColor="@color/white"
+                app:boxStrokeColor="@color/navBarColor"
+                android:textColorHint="@color/navBarColor"
+                app:hintTextColor="@color/navBarColor"
+                android:padding="8dp"
+                app:helperTextTextColor="@color/navBarColor"
                 android:hint="Major"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
                 <AutoCompleteTextView
                     android:id="@+id/dropMajor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/navBarColor"
                     android:inputType="none"/>
             </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
     </ScrollView>
 
