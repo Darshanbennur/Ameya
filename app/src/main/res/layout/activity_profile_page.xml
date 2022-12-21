@@ -69,10 +69,17 @@
                     android:background="@drawable/ic_baseline_camera_alt_24"/>
 
                 <ImageButton
+                    android:id="@+id/uploadImage"
+                    android:layout_width="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_baseline_file_upload_24"/>
+
+                <ImageButton
                     android:id="@+id/removePhoto"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/cancel"/>
 
             </LinearLayout>

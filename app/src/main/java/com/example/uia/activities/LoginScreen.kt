@@ -7,13 +7,12 @@ import android.os.Bundle
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.widget.Toast
+import com.example.uia.constant.Constants
+import com.example.uia.constant.Constants.*
 import com.example.uia.databinding.ActivityLoginScreenBinding
 import com.example.uia.models.UserModel
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import java.util.*
@@ -39,7 +38,6 @@ class LoginScreen : AppCompatActivity() {
         binding.loginButton.setOnClickListener {
             var userEmail = binding.userEmail.text.toString()
             var password = binding.userPassword.text.toString()
-            var phoneNum = binding.userPhoneNumber.text.toString()
 
             if (!Patterns.EMAIL_ADDRESS.matcher(userEmail).matches()){
                 Toast.makeText(applicationContext,"Invalid Email Address Format", Toast.LENGTH_SHORT).show()
@@ -49,15 +47,19 @@ class LoginScreen : AppCompatActivity() {
                 Toast.makeText(applicationContext,"Password length minimum 8 characters", Toast.LENGTH_SHORT).show()
                 binding.userPassword.requestFocus()
             }
-            else if (phoneNum.length!=10){
-                Toast.makeText(applicationContext,"Phone Number of Incorrect Length", Toast.LENGTH_SHORT).show()
-                binding.userPhoneNumber.requestFocus()
-            }
             else{
                 firebaseAuth.signInWithEmailAndPassword(userEmail,password).addOnCompleteListener {
                     if (it.isSuccessful){
                         Toast.makeText(applicationContext,"Logged in Successfully", Toast.LENGTH_SHORT).show()
-                        login(phoneNum)
+
+                        sharedPreferences.edit().putString("email",userEmail).apply()
+                        sharedPreferences.edit().putString("quiz_status","Done").apply()
+
+                        getDataIntoSharedPreferences()
+
+                        var intent = Intent(this,ResultScreen::class.java)
+                        startActivity(intent)
+                        finish()
                     }
                     else{
                         Toast.makeText(applicationContext,"Login Error", Toast.LENGTH_SHORT).show()
@@ -67,20 +69,26 @@ class LoginScreen : AppCompatActivity() {
         }
     }
 
-    fun login(phoneNumber : String) {
-        var name : String
-        var dataBaseRef : DatabaseReference = Firebase.database.getReference("Users").child(phoneNumber)
-        dataBaseRef.addListenerForSingleValueEvent(object : ValueEventListener{
+    private fun getDataIntoSharedPreferences() {
+
+        FirebaseDatabase.getInstance().getReference("Users/" + FirebaseAuth.getInstance().currentUser!!.uid).addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                for(data in snapshot.children){
-                    if(Objects.equals(data.key,"name")) {
-                        name = data.value.toString()
-                        var userModel = UserModel(name, phoneNumber)
-                        var intent = Intent(applicationContext, MainActivity::class.java)
-                        intent.putExtra("currentUser", userModel)
-                        startActivity(intent)
-                        finish()
-                    }
+
+                for (snapshot : DataSnapshot in snapshot.children){
+                    if(Objects.equals(snapshot.key,"education"))
+                        sharedPreferences.edit().putString("userEducation","" + snapshot.value).apply()
+                    if(Objects.equals(snapshot.key,"gender"))
+                        sharedPreferences.edit().putString("userGender","" + snapshot.value).apply()
+                    if(Objects.equals(snapshot.key,"major"))
+                        sharedPreferences.edit().putString("userMajor","" + snapshot.value).apply()
+                    if(Objects.equals(snapshot.key,"married"))
+                        sharedPreferences.edit().putString("userMaritial","" + snapshot.value).apply()
+                    if(Objects.equals(snapshot.key,"name"))
+                        sharedPreferences.edit().putString("name","" + snapshot.value).apply()
+                    if(Objects.equals(snapshot.key,"no"))
+                        sharedPreferences.edit().putString("number","" + snapshot.value).apply()
+                    if(Objects.equals(snapshot.key,"email"))
+                        sharedPreferences.edit().putString("email","" + snapshot.value).apply()
                 }
             }
 

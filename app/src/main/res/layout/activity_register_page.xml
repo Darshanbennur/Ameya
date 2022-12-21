@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/navBarColor"
+    android:background="@drawable/register_login_back"
     tools:context=".activities.RegisterPage">
 
     <LinearLayout
@@ -59,6 +59,8 @@
                 app:errorEnabled="true"
                 app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
                 app:endIconMode="clear_text"
+                app:startIconTint="@color/black"
+                app:hintTextColor="@color/white"
                 app:helperTextTextColor="@color/white"
                 android:hint="Full Name">
 
@@ -84,6 +86,8 @@
                 app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
                 app:endIconMode="clear_text"
                 app:helperTextTextColor="@color/white"
+                app:hintTextColor="@color/white"
+                app:startIconTint="@color/black"
                 android:hint="Email">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -107,7 +111,9 @@
                 app:endIconMode="clear_text"
                 app:prefixText="+91"
                 app:helperTextTextColor="@color/white"
+                app:startIconTint="@color/black"
                 app:errorEnabled="true"
+                app:hintTextColor="@color/white"
                 app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
                 app:counterEnabled="true"
                 app:counterMaxLength="10"
@@ -133,6 +139,8 @@
                 app:startIconDrawable="@drawable/ic_baseline_lock_24"
                 app:helperText="Required*"
                 app:errorEnabled="true"
+                app:startIconTint="@color/black"
+                app:hintTextColor="@color/white"
                 app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
                 app:endIconMode="password_toggle"
                 app:helperTextTextColor="@color/white"

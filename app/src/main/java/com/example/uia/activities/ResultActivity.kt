@@ -6,8 +6,11 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Toast
 import com.example.uia.databinding.ActivityResultBinding
 import ir.mahozad.android.PieChart
+import ir.mahozad.android.component.Alignment
+import ir.mahozad.android.unit.Dimension
 
 class ResultActivity : AppCompatActivity() {
 
@@ -36,6 +39,13 @@ class ResultActivity : AppCompatActivity() {
             )
             centerLabelIconTint = Color.rgb(255, 0, 0)
         }
+        binding.pieChart.apply {
+            isLegendEnabled = true
+            legendBoxAlignment = Alignment.CENTER
+            isLegendBoxBorderEnabled = true
+            legendsIcon = PieChart.DefaultIcons.SLICE2
+        }
+
         sharedPreferences.edit().putString("quiz_status","Done").apply()
 
         var max = 0
@@ -61,10 +71,10 @@ class ResultActivity : AppCompatActivity() {
 
         when (word) {
             "R" -> binding.approach.text = "Your mind have a Realistic Approach!"
-            "I" -> binding.approach.text = "Your mind have a Investigative Approach!"
-            "A" -> binding.approach.text = "Your mind have a Artistic Approach!"
+            "I" -> binding.approach.text = "Your mind have an Investigative Approach!"
+            "A" -> binding.approach.text = "Your mind have an Artistic Approach!"
             "S" ->  binding.approach.text = "Your mind have a Social Approach!"
-            "E" -> binding.approach.text = "Your mind have a Enterprising Approach!"
+            "E" -> binding.approach.text = "Your mind have an Enterprising Approach!"
             "C" -> binding.approach.text = "Your mind have a Conventional Approach!"
             else -> { // Note the block
 

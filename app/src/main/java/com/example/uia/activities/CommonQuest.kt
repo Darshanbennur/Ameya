@@ -11,7 +11,9 @@ import com.example.uia.R
 import com.example.uia.constant.Constants
 import com.example.uia.databinding.ActivityCommonQuestBinding
 import com.example.uia.models.UserModel
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -64,14 +66,16 @@ class CommonQuest : AppCompatActivity() {
         currentUser.major = Constants.Major.valueOf(binding.dropMajor.text.toString())
         sharedPreferences.edit().putString("userMajor","" + currentUser.major).apply()
 
-        var myMap = mapOf<String, UserModel>(
-            currentUser.no to currentUser
-        )
-        dataBaseRef.updateChildren(myMap).addOnSuccessListener {
-            Toast.makeText(applicationContext,"Profile Created", Toast.LENGTH_SHORT).show()
-        }.addOnFailureListener {
-            Toast.makeText(applicationContext,"Sed !!", Toast.LENGTH_SHORT).show()
-        }
+//        var myMap = mapOf<String, UserModel>(
+//            currentUser.no to currentUser
+//        )
+//        dataBaseRef.updateChildren(myMap).addOnSuccessListener {
+//            Toast.makeText(applicationContext,"Profile Created", Toast.LENGTH_SHORT).show()
+//        }.addOnFailureListener {
+//            Toast.makeText(applicationContext,"Sed !!", Toast.LENGTH_SHORT).show()
+//        }
+
+        FirebaseDatabase.getInstance().getReference("Users/" + FirebaseAuth.getInstance().currentUser!!.uid).setValue(currentUser)
 
         var intent = Intent(this, ResultScreen::class.java)
         intent.putExtra("currentUser", currentUser)

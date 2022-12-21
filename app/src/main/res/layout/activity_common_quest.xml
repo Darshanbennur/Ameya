@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/navBarColor"
+    android:background="@drawable/register_login_back"
     tools:context=".activities.CommonQuest">
 
     <TextView
@@ -21,6 +21,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="610dp">
 
         <LinearLayout

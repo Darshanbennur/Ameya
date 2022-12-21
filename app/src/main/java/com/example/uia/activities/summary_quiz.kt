@@ -21,7 +21,6 @@ class summary_quiz : AppCompatActivity() {
         var word = intent.getStringExtra("pahilaword")
         var link = ""
 
-        Toast.makeText(applicationContext,word, Toast.LENGTH_SHORT).show()
         when (word) {
             "R" -> {
                 binding.tv1.text = "Engineering"

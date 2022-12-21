@@ -14,7 +14,7 @@ import com.example.uia.databinding.ActivityShifterClassBinding
 
 class shifterClass : AppCompatActivity() {
     lateinit var binding : ActivityShifterClassBinding
-    var SPLASH_SCREEN_TIME_OUT = 2000
+    var SPLASH_SCREEN_TIME_OUT = 1500
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

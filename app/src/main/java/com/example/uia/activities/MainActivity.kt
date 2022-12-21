@@ -11,7 +11,9 @@ import com.example.uia.constant.Constants.EduStatus
 import com.example.uia.constant.Constants.EduStatus.*
 import com.example.uia.databinding.ActivityMainBinding
 import com.example.uia.models.UserModel
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -61,14 +63,14 @@ class MainActivity : AppCompatActivity() {
 
     fun updateData(educationStatus : EduStatus){
         currentUser.education = educationStatus
-        val favourUpdate = mapOf<String,UserModel>(
-            currentUser.no to currentUser
-        )
+//        val favourUpdate = mapOf<String,UserModel>(
+//            currentUser.no to currentUser
+//        )
         preferences.edit().putString("userEducation","" + currentUser.education).apply()
 
-        dataBaseRef.updateChildren(favourUpdate).addOnSuccessListener {
-            Toast.makeText(applicationContext,"Education Status Updated",Toast.LENGTH_SHORT).show()
-        }
+//        dataBaseRef.updateChildren(favourUpdate).addOnSuccessListener {
+//            Toast.makeText(applicationContext,"Education Status Updated",Toast.LENGTH_SHORT).show()
+//        }
         var intent = Intent(this, CommonQuest::class.java)
         intent.putExtra("currentUser", currentUser)
         startActivity(intent)

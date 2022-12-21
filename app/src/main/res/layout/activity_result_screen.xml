@@ -9,16 +9,46 @@
     android:background="@color/navBarColor"
     tools:context=".activities.ResultScreen">
 
-    <TextView
-        android:id="@+id/userName"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/andika"
-        android:textSize="24sp"
-        android:layout_marginStart="20dp"
-        android:textColor="@color/white"
-        android:layout_marginTop="15dp"
-        android:text="Hello, Darshan!!"/>
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/andika"
+            android:textSize="24sp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:text="Hello, Username!!"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/logout"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_baseline_exit_to_app_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="@color/white"
+                android:clickable="true"
+                android:fontFamily="@font/andika"/>
+
+        </LinearLayout>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,21 +59,67 @@
         android:textColor="@color/white"
         android:text="-Welcome Back"/>
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/animater"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="120dp"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/hello"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animater"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:lottie_autoPlay="true"
+            android:layout_marginEnd="50dp"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/hello"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/developerProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/ic_baseline_person_24" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="invisible"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/ic_baseline_feedback_24" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rippleColor="@color/navBarColor"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/ic_baseline_menu_24" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:background="@drawable/ques_ui">
 
@@ -127,14 +203,17 @@
                         android:layout_height="110dp"
                         app:lottie_autoPlay="true"
                         android:tag="2"
+                        android:alpha="0.3"
                         android:onClick="reDirect"
                         app:lottie_loop="true"
                         app:lottie_rawRes="@raw/careers"/>
                     <TextView
+                        android:id="@+id/career"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textAlignment="center"
+                        android:alpha="0.3"
                         android:textStyle="bold"
                         android:textColor="@color/navBarColor"
                         android:fontFamily="@font/andika"
@@ -171,15 +250,18 @@
                         android:layout_height="100dp"
                         app:lottie_autoPlay="true"
                         android:tag="3"
+                        android:alpha="0.3"
                         android:onClick="reDirect"
                         app:lottie_loop="true"
                         app:lottie_rawRes="@raw/mentorconnect"/>
                     <TextView
+                        android:id="@+id/mentor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textAlignment="center"
                         android:textStyle="bold"
+                        android:alpha="0.3"
                         android:textColor="@color/navBarColor"
                         android:fontFamily="@font/andika"
                         android:text="Mentor Connect"/>
@@ -215,15 +297,18 @@
                         android:layout_height="100dp"
                         app:lottie_autoPlay="true"
                         android:tag="4"
+                        android:alpha="0.3"
                         android:onClick="reDirect"
                         app:lottie_loop="true"
                         app:lottie_rawRes="@raw/profile"/>
                     <TextView
+                        android:id="@+id/profile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:textAlignment="center"
                         android:textStyle="bold"
+                        android:alpha="0.3"
                         android:textColor="@color/navBarColor"
                         android:fontFamily="@font/andika"
                         android:text="Profile"/>
@@ -233,14 +318,15 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/potential"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
+            android:tag="5"
+            android:alpha="0.3"
+            android:layout_marginTop="10dp"
             android:background="@drawable/buttons_back"
             android:textColor="@color/white"
-            android:text="Let's Test Your Potential"/>
+            android:text="Blog Posts"/>
 
     </LinearLayout>
-
 
 </LinearLayout>

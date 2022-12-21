@@ -33,6 +33,16 @@ public class UserModel implements Serializable {
         this.email = email;
     }
 
+    public UserModel(EduStatus education,Gender gender,Constants.Major major, Constants.married married,String name, String no, UrbanStatus urban) {
+        this.education = education;
+        this.gender = gender;
+        this.major = major;
+        this.married = married;
+        this.name = name;
+        this.no = no;
+        this.urban = urban;
+    }
+
     public UserModel(String name, String no) {
         this.name = name;
         this.no = no;
