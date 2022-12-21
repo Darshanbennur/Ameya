@@ -68,7 +68,7 @@ class HomeScreen : AppCompatActivity() {
     }
 
     fun nextQuestion(view : View){
-//        animater(count+1)
+        animater(count+1)
         if(count == 3)
             binding.btnext.text = "Complete the Test"
         for(i in 0..arrayList.size-1){

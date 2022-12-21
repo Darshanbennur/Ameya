@@ -12,8 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:gravity="center_horizontal"
-        android:background="@color/navBarColor">
+        android:gravity="center_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,7 +28,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/register_login_back"
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
@@ -47,7 +45,7 @@
 
             <LinearLayout
                 android:layout_width="350dp"
-                android:layout_height="410dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">

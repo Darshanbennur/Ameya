@@ -97,7 +97,9 @@ class ResultScreen : AppCompatActivity() {
         }
 
         binding.feedback.setOnClickListener {
-            Toast.makeText(applicationContext,"Feedback Form", Toast.LENGTH_SHORT).show()
+            var url = "https://forms.gle/jwmbjZHdmTjbGu9E8"
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(browserIntent)
         }
 
         binding.developerProfile.setOnClickListener {
@@ -157,8 +159,8 @@ class ResultScreen : AppCompatActivity() {
             }
             "3" -> {
                 if (binding.btn3.isClickable){
-                    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.notion.so/Mentor-Guidance-Portal-61971aa392e44db897a7d4270abdb587"))
-                    startActivity(browserIntent)
+                    val intent = Intent(this,mentorConnect::class.java)
+                    startActivity(intent)
                 }else{
                     Toast.makeText(applicationContext,"Complete the Quiz", Toast.LENGTH_SHORT).show()
                 }

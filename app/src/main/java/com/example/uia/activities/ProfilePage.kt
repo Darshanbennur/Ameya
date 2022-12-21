@@ -109,7 +109,7 @@ class ProfilePage : AppCompatActivity() {
         binding.phoneAnswer.text = sharedPreferences.getString("number","paise nahi")
         binding.emailAnswer.text = sharedPreferences.getString("email","not registered")
 
-        binding.emailAnswer.setOnClickListener {
+        binding.emailAnswerAns.setOnClickListener {
             val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText(label.toString(), binding.emailAnswer.text)
             clipboard.setPrimaryClip(clip)
@@ -120,13 +120,6 @@ class ProfilePage : AppCompatActivity() {
             finish()
         }
 
-    }
-
-    fun contactSeller(view: View) {
-        val txtview = view as TextView
-        val intent_04 = Intent(Intent.ACTION_DIAL)
-        intent_04.data = Uri.parse("tel:" + txtview.text.toString())
-        startActivity(intent_04)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

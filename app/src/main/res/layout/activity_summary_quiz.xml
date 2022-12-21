@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
         <TextView
@@ -37,9 +37,9 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         app:cardCornerRadius="20dp"
-        android:layout_height="265dp">
+        android:layout_height="260dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -124,7 +124,7 @@
         android:id="@+id/explore"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/andika"
         android:background="@drawable/buttons_back"
         android:textColor="@color/white"
@@ -133,7 +133,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:fontFamily="@font/andika"
         android:textSize="15sp"
@@ -142,8 +142,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
         app:cardCornerRadius="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_height="265dp">
+        android:layout_marginTop="5dp"
+        android:layout_height="260dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -229,7 +229,7 @@
         android:id="@+id/explore2"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/andika"
         android:background="@drawable/buttons_back"
         android:textColor="@color/white"

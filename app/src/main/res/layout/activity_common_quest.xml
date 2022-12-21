@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     android:background="@drawable/register_login_back"
     tools:context=".activities.CommonQuest">
 
@@ -15,19 +15,19 @@
         android:layout_height="wrap_content"
         android:text="Almost There, Enter the Following Data : "
         android:textColor="@color/white"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/andika"/>
 
     <ScrollView
         android:layout_width="match_parent"
+        android:layout_height="540dp"
         android:layout_margin="10dp"
-        android:layout_height="610dp">
+        android:background="@drawable/register_login_back">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/register_login_back"
             android:orientation="vertical">
 
             <Space
