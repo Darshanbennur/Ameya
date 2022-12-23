@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_height="190dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingTop="8dp"
     android:paddingStart="15dp"
@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:text="Name : "
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/andika"/>
 
                 <TextView
@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:text="Darshan Gopal Bennur"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/andika"/>
             </LinearLayout>
 
@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:text="Email ID : "
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/andika"/>
 
                 <TextView
@@ -65,7 +65,7 @@
                     android:text="darshan.b21@iiits.in"
                     android:textColor="@color/black"
                     android:layout_marginStart="10dp"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/andika"/>
 
             </LinearLayout>
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:text="LinkedIn ID : "
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/andika"/>
 
                 <TextView
@@ -90,7 +90,7 @@
                     android:text="bennur_darshan"
                     android:textColor="@color/black"
                     android:layout_marginStart="10dp"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/andika"/>
 
             </LinearLayout>
@@ -105,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:text="Work Experience(yrs) : "
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/andika"/>
 
                 <TextView
@@ -115,7 +115,7 @@
                     android:text="2"
                     android:textColor="@color/black"
                     android:layout_marginStart="10dp"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/andika"/>
 
             </LinearLayout>
@@ -130,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:text="Work as : "
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/andika"/>
 
                 <TextView
@@ -140,7 +140,7 @@
                     android:text="Engineer"
                     android:textColor="@color/black"
                     android:layout_marginStart="10dp"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:fontFamily="@font/andika"/>
 
             </LinearLayout>

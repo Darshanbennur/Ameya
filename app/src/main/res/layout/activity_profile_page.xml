@@ -29,13 +29,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile : "
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:fontFamily="@font/andika"
         android:textColor="@color/white"/>
 
     <Space
         android:layout_width="wrap_content"
-        android:layout_height="20dp"/>
+        android:layout_height="10dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
                     android:textColor="@color/white"
                     android:layout_marginStart="5dp"
                     android:fontFamily="@font/andika"
-                    android:textSize="11sp"
+                    android:textSize="11dp"
                     android:text="Select"/>
 
                 <ImageButton
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:fontFamily="@font/andika"
-                    android:textSize="11sp"
+                    android:textSize="11dp"
                     android:text="Upload"/>
 
                 <ImageButton
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/white"
                     android:fontFamily="@font/andika"
-                    android:textSize="11sp"
+                    android:textSize="11dp"
                     android:text="Remove"/>
 
             </LinearLayout>
@@ -120,18 +120,19 @@
             android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="name"
-            android:textSize="18sp"
+            android:textSize="17dp"
             android:textColor="@color/white"
             android:fontFamily="@font/andika"/>
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_marginTop="20dp"
-        android:layout_width="300dp"
+        android:layout_width="340dp"
         android:visibility="visible"
         app:cardCornerRadius="30dp"
-        android:layout_height="270dp">
+        android:layout_height="280dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -151,7 +152,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Education : "
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
@@ -162,7 +163,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="School"
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
@@ -179,7 +180,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Major : "
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
@@ -190,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="Computer Science"
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
@@ -206,7 +207,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Gender : "
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
@@ -217,7 +218,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="Male"
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
@@ -233,7 +234,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Maritial Status : "
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
@@ -244,7 +245,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="Never Married"
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
@@ -260,7 +261,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Phone Number : "
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
@@ -271,7 +272,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="8356896545"
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
@@ -287,30 +288,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email : "
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
 
                 <TextView
-                    android:id="@+id/emailAnswer"
+                    android:id="@+id/emailAnswerAns"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:text="darshan.b21@iiits.in"
-                    android:textSize="16sp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/andika"
                     android:layout_marginTop="10dp"/>
-
-                <ImageButton
-                    android:id="@+id/emailAnswerAns"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/design_default_color_primary_variant"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/ic_email"/>
             </LinearLayout>
 
         </LinearLayout>

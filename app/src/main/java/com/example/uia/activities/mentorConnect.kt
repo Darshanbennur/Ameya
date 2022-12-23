@@ -39,10 +39,13 @@ class mentorConnect : AppCompatActivity(),mentorAdapter.OnItemClickListener {
         getMentorsInTheView()
 
         binding.registerMentor.setOnClickListener {
-            Toast.makeText(applicationContext,"Coming Soon...", Toast.LENGTH_SHORT).show()
+            var intent = Intent(this,MentorRegister::class.java)
+            startActivity(intent)
         }
 
     }
+
+
 
     private fun getMentorsInTheView() {
         val databaseReference : DatabaseReference = FirebaseDatabase.getInstance().getReference("Mentor")
@@ -117,5 +120,10 @@ class mentorConnect : AppCompatActivity(),mentorAdapter.OnItemClickListener {
         ) { _, _ -> }
         val dialog = builder.create()
         dialog.show()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }

@@ -71,7 +71,7 @@ class HomeScreen : AppCompatActivity() {
         animater(count+1)
         if(count == 3)
             binding.btnext.text = "Complete the Test"
-        for(i in 0..arrayList.size-1){
+        for(i in 0 until arrayList.size){
             if (arrayList[i].status){
                 var char = answerSet[count][i]
                 when (char) {

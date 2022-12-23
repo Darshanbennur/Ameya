@@ -15,6 +15,7 @@
         android:id="@+id/registerMentor"
         android:layout_width="190dp"
         android:layout_height="60dp"
+        android:textSize="13dp"
         android:background="@drawable/buttons_back"
         android:textColor="@color/white"
         android:fontFamily="@font/andika"

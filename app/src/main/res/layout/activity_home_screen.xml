@@ -17,7 +17,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:fontFamily="@font/andika"
         android:textColor="@color/white"
         android:text="📑  RIASEC  Test"/>
@@ -25,7 +25,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="8dp"
         android:padding="10dp"
         android:orientation="vertical"
         android:gravity="center_horizontal">
@@ -61,7 +61,7 @@
                     android:fontFamily="@font/andika"
                     android:text="1/5"
                     android:textColor="@color/black"
-                    android:textSize="19sp" />
+                    android:textSize="19dp" />
 
                 <TextView android:id="@+id/mainQues"
                     android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
                     android:fontFamily="@font/andika"
                     android:textColor="@color/black"
                     android:textStyle="bold"
-                    android:textSize="22sp"
+                    android:textSize="22dp"
                     android:text="Ques will come here"/>
 
                 <ListView
@@ -88,6 +88,7 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="10dp"
                     android:textColor="@color/white"
+                    android:textSize="13sp"
                     android:onClick="nextQuestion"
                     android:background="@drawable/buttons_back"/>
 

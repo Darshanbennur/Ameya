@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:text="Create an Account"
             android:fontFamily="@font/andika"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:layout_marginTop="15dp"
             android:textColor="@color/white"/>
 
@@ -58,6 +58,7 @@
                 app:errorEnabled="true"
                 app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
                 app:endIconMode="clear_text"
+                android:textColorHint="@color/black"
                 app:startIconTint="@color/black"
                 app:hintTextColor="@color/white"
                 app:helperTextTextColor="@color/white"
@@ -66,6 +67,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/userName"
                     android:layout_width="match_parent"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -84,6 +87,7 @@
                 app:errorEnabled="true"
                 app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
                 app:endIconMode="clear_text"
+                android:textColorHint="@color/black"
                 app:helperTextTextColor="@color/white"
                 app:hintTextColor="@color/white"
                 app:startIconTint="@color/black"
@@ -92,6 +96,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/userEmail"
                     android:layout_width="match_parent"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:inputType="textWebEmailAddress"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -116,12 +122,15 @@
                 app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
                 app:counterEnabled="true"
                 app:counterMaxLength="10"
+                android:textColorHint="@color/black"
                 android:hint="Phone Number">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/userPhoneNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
                     android:maxLength="10"
                     android:inputType="phone"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -142,6 +151,7 @@
                 app:hintTextColor="@color/white"
                 app:errorIconDrawable="@drawable/ic_baseline_error_outline_24"
                 app:endIconMode="password_toggle"
+                android:textColorHint="@color/black"
                 app:helperTextTextColor="@color/white"
                 android:hint="Password">
 
@@ -149,6 +159,8 @@
                     android:id="@+id/userPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
                     android:inputType="textPassword"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -175,7 +187,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:textColor="@color/black"
                     android:text="Already have an Account?"/>
 
@@ -183,7 +195,7 @@
                     android:id="@+id/loginHereButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:layout_marginStart="10dp"
                     android:textColor="@color/navBarColor"
                     android:text="Login Here"/>

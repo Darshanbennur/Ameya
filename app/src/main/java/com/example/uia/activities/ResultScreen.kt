@@ -147,6 +147,7 @@ class ResultScreen : AppCompatActivity() {
             "1" -> {
                 var intent = Intent(this,HomeScreen::class.java)
                 startActivity(intent)
+                finish()
             }
             "2" -> {
                 if (binding.btn2.isClickable){

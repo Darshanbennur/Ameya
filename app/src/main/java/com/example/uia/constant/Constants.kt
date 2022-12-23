@@ -9,7 +9,7 @@ class Constants {
     }
 
     enum class UrbanStatus {
-        Urban, Rural, SubUrban
+        Urban, SubUrban, Rural
     }
 
     enum class Gender {
@@ -25,6 +25,6 @@ class Constants {
     }
 
     enum class Major{
-        ComputerScience, Medicine, Accounts
+        Engineering, Architecture, Medicine, Accounts, Teaching, Arts, Law, Agriculture, Photography, No_Disclosure
     }
 }

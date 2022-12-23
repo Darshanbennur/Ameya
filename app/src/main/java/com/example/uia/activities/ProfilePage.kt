@@ -107,11 +107,11 @@ class ProfilePage : AppCompatActivity() {
         binding.GenderAnswer.text = sharedPreferences.getString("userGender","ladka hai")
         binding.marriedAnswer.text = sharedPreferences.getString("userMaritial","koi na mil rha ise")
         binding.phoneAnswer.text = sharedPreferences.getString("number","paise nahi")
-        binding.emailAnswer.text = sharedPreferences.getString("email","not registered")
+        binding.emailAnswerAns.text = sharedPreferences.getString("email","not registered")
 
         binding.emailAnswerAns.setOnClickListener {
             val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
-            val clip = ClipData.newPlainText(label.toString(), binding.emailAnswer.text)
+            val clip = ClipData.newPlainText(label.toString(), binding.emailAnswerAns.text)
             clipboard.setPrimaryClip(clip)
             Toast.makeText(applicationContext,"Copied to ClipBoard", Toast.LENGTH_SHORT).show()
         }

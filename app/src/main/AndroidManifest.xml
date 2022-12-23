@@ -15,6 +15,13 @@
         android:theme="@style/Theme.UIA"
         tools:targetApi="31">
         <activity
+            android:name=".activities.MentorRegister"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.mentorConnect"
             android:exported="false">
             <meta-data

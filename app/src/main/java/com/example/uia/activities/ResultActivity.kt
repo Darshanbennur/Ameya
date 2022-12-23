@@ -109,4 +109,12 @@ class ResultActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        var intent = Intent(this,ResultScreen::class.java)
+        startActivity(intent)
+        finish()
+    }
+
 }

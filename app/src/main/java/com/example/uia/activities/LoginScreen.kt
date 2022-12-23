@@ -87,6 +87,8 @@ class LoginScreen : AppCompatActivity() {
                         sharedPreferences.edit().putString("name","" + snapshot.value).apply()
                     if(Objects.equals(snapshot.key,"no"))
                         sharedPreferences.edit().putString("number","" + snapshot.value).apply()
+                    if(Objects.equals(snapshot.key,"profilePicture"))
+                        sharedPreferences.edit().putString("profilePicture","" + snapshot.value).apply()
                     if(Objects.equals(snapshot.key,"email"))
                         sharedPreferences.edit().putString("email","" + snapshot.value).apply()
                 }

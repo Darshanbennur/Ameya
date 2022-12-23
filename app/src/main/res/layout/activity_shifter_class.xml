@@ -33,7 +33,7 @@
         android:text="Demo Text"
         android:textColor="@color/white"
         android:fontFamily="@font/andika"
-        android:textSize="18sp"/>
+        android:textSize="16sp"/>
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieFile"

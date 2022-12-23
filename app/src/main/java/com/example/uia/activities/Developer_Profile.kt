@@ -35,6 +35,10 @@ class Developer_Profile : AppCompatActivity() {
             startActivity(browserIntent)
         }
 
+        binding.back.setOnClickListener {
+            finish()
+        }
+
         binding.gmail.setOnClickListener {
             val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText(R.attr.label.toString(), "bennurdarshan@gmail.com")

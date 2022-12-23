@@ -25,67 +25,83 @@
             android:fontFamily="@font/andika"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="18sp"/>
+            android:textSize="16dp"/>
 
             <ir.mahozad.android.PieChart
                 android:id="@+id/pieChart"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_width="300dp"
                 android:layout_height="300dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical">
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="R - Realistic"
-                android:fontFamily="@font/andika"
-                android:textColor="@color/black"
-                android:textSize="15sp"/>
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="R - Realistic"
+                    android:fontFamily="@font/andika"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I - Investigative"
+                    android:fontFamily="@font/andika"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A - Artistic"
+                    android:fontFamily="@font/andika"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="I - Investigative"
-                android:fontFamily="@font/andika"
-                android:textColor="@color/black"
-                android:textSize="15sp"/>
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A - Artistic"
-                android:fontFamily="@font/andika"
-                android:textColor="@color/black"
-                android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S - Social"
+                    android:fontFamily="@font/andika"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="S - Social"
-                android:fontFamily="@font/andika"
-                android:textColor="@color/black"
-                android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E - Enterprising"
+                    android:fontFamily="@font/andika"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="E - Enterprising"
-                android:fontFamily="@font/andika"
-                android:textColor="@color/black"
-                android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C - Conventional"
+                    android:fontFamily="@font/andika"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="C - Conventional"
-                android:fontFamily="@font/andika"
-                android:textColor="@color/black"
-                android:textSize="15sp"/>
+            </LinearLayout>
+
         </LinearLayout>
 
         <com.airbnb.lottie.LottieAnimationView
@@ -97,6 +113,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/summaryBt"
+            android:layout_marginTop="10dp"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:text="Get Results"
